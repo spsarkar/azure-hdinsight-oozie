@@ -1,0 +1,14 @@
+jobTracker=yarnrm
+nameNode=@NAMENODE@
+basePath=${nameNode}@BASE_PATH@/azure-hdinsight-oozie
+emailTo=@EMAIL_TO@
+oozieUrl=@OOZIE_URL@
+inputPath=${basePath}/data/input.csv
+outputPath=${basePath}/data/output
+
+# Use Oozie system paths, libpath
+oozie.use.system.libpath=true
+oozie.libpath=/user/oozie/libext
+
+# Workflow file
+oozie.wf.application.path=${basePath}/workflows/workflow.xml
